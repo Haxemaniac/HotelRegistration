@@ -20,6 +20,7 @@ CREATE TABLE IF NOT EXISTS Reservations(
     date_of_arrival DATE NOT NULL,
     nights INT NOT NULL,
     food TEXT CHECK (food IN('yes','no')),
+    canceled BOOLEAN NOT NULL DEFAULT FALSE
 );
 
 CREATE TABLE IF NOT EXISTS Rooms(
